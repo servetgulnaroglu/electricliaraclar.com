@@ -1,0 +1,224 @@
+.car {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+    /* margin: 10px 0; */
+}
+
+.headerContainer {
+    background-color: #fafafa;
+    border-bottom: 1px solid #ddd;
+}
+.header {
+    max-width: 768px;
+    padding: 2.5%;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 900px){
+    .header {
+        border-left: 0 !important;
+        border-right: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .header {
+        display: block;
+        text-align: center;
+    }
+    .icon {
+        text-align: center;
+    }
+    .inlineBlock {
+        width:  100%;
+    }
+}
+
+.header h1 {
+    white-space: nowrap;
+}
+.images {
+
+}
+
+.dataTable { 
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd;
+}
+.dataTable a{
+    text-decoration: none;
+    color: black;
+}
+
+#icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+@media only screen and (max-width: 450px){
+    .icon p {
+        margin: 0 !important;
+        display: block;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .iconInner {
+        font-size: 2em;
+    }
+
+    .icon span {
+        display: block;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: normal;
+    }
+
+    .icon p {
+        margin: 0 !important;
+        display: block;
+        font-weight: bold;
+    }
+}
+.icon {
+    max-width: 200px;
+    display: block;
+}
+.icon p {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+.icon span {
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 300;
+}
+
+.iconInner {
+    font-size:3em;
+    display: inline;
+}
+
+.expectedNotification {
+    box-sizing: border-box;
+    max-width: 768px;
+    padding: 10px;
+    border: 1px dashed grey;
+    background: #ffb833;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+}
+
+
+.dataTableContainer {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dataTableContainer,
+ .infoBoxContainer {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+}
+.dataTableContainer {
+    padding: 0px 10px 0 10px;
+}
+
+.hasLegend{ 
+    padding-bottom: 15px;
+    border-bottom: none;
+}
+
+.inlineBlock {
+    width: 45%;
+}
+.inlineBlock {
+    display: inline-block;
+}
+
+.dataTableLegend {
+    padding: 5px 5px 30px 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dataTableLegend, .chargeTableLegend {
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 5px;
+    line-height: 15px;
+    text-align: center;
+}
+
+
+.h2 {
+    font-size:  24px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    align-items: center;
+} 
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableRight {
+    float: right;
+}
+
+@media only screen and (max-width: 512px){
+    .tableRight {
+        float:left;
+    }
+    .inlineBlock {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+.tdRight {
+    float: right;
+    text-align: right;
+    font-weight: 600;
+}
+
+
+.thLeft {
+    text-align: left;
+}
+
+.listItem {
+    list-style-type: disc;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.images {
+    padding-left:  20px;
+    padding-right:  20px;
+    padding-bottom: 50px;
+    
+}

@@ -1,4 +1,3 @@
-
 import h from '../styles/singlecarlayout.module.css';
 import d from '../styles/singleCarLayoutDetails.module.css';
 import Link from 'next/link'

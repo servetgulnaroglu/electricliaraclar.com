@@ -21,13 +21,11 @@ export default function SingleCarLayout({ car, home }) {
         fontSize: '20px',
         fontWeight: 'bold',
     }
-  
-    
     if (home) {
         return (
             <>
                 <Head>
-                    <title>{car.model}</title>
+                    <title>Electrikli Araclar</title>
                 </Head>
                 <div className={h.item}>
                     <div className={h.dataWrapper}>
@@ -176,6 +174,7 @@ export default function SingleCarLayout({ car, home }) {
         // },3000)
         return (<>
             <Head>
+                <title>{car.model}</title>
             </Head>
             <div className={d.car}>
                 <div className={d.headerContainer}>

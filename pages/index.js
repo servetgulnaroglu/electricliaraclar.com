@@ -19,6 +19,7 @@ export default function Home({cars}) {
   const [filterType, setFilterType] = useState(initialSortingMethod)
   const [carsState, setCarsState] = useState(cars);
 
+  
   return (
     <div className="container">
       <Head>

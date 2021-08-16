@@ -180,8 +180,10 @@ export default function SingleCarLayout({ car, home }) {
                                     <img src={el.image} alt="" />
                                 </div>
 
-                                
+
                             })}
+
+                            
                         </Carousel>
                     </div>
                 </div>

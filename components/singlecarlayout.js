@@ -179,6 +179,8 @@ export default function SingleCarLayout({ car, home }) {
                                 return <div key={el.image}>
                                     <img src={el.image} alt="" />
                                 </div>
+
+                                
                             })}
                         </Carousel>
                     </div>

@@ -217,8 +217,18 @@
 }
 
 .images {
-    padding-left:  20px;
-    padding-right:  20px;
-    padding-bottom: 50px;
-    
+
+    width: 100%;
 }
+
+.imagesParent {
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .imagesParent {
+        width: 100%;
+    }
+  }

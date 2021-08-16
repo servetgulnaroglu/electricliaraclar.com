@@ -6,9 +6,12 @@ import typeTwoMennekesImg from '../public/images/Type-2-Mennekes.jpeg'
 import Head from 'next/head'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBatteryFull, faBolt, faCarBattery, faFlag, faFlagUsa, faLeaf, faRoad, faUser } from '@fortawesome/free-solid-svg-icons';
-import { Carousel } from 'react-carousel-minimal';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 import { useEffect, useState } from 'react';
 import checkImage from '../lib/imageExists';
+
 
 export default function SingleCarLayout({ car, home }) {
     const [images,setImages] = useState([{image:car.firstImageUrl, caption:""}]);
@@ -168,10 +171,6 @@ export default function SingleCarLayout({ car, home }) {
             getImageData();
         }, []);
         
-        // console.log(images);
-        // setInterval(()=>{
-        //     console.log(images);
-        // },3000)
         return (<>
             <Head>
                 <title>{car.model}</title>
@@ -183,39 +182,22 @@ export default function SingleCarLayout({ car, home }) {
                         <span>Elektrikli Araç</span>
                     </div>
                 </div>
-                <div className={d.images}>
-                {!imagesReady ? 
-                ""
-                : 
-                (
-                        <Carousel
-                        data={images}
-                        time={5000}
-                        width="850px"
-                        height="500px"
-                        captionStyle={captionStyle}
-                        radius="10px"
-                        slideNumber={true}
-                        slideNumberStyle={slideNumberStyle}
-                        captionPosition="bottom"
-                        automatic={false}
-                        dots={true}
-                        pauseIconColor="white"
-                        pauseIconSize="40px"
-                        slideBackgroundColor="darkgrey"
-                        slideImageFit="cover"
-                        thumbnails={true}
-                        thumbnailWidth="100px"
-                        style={{
-                        textAlign: "center",
-                        maxWidth: "850px",
-                        maxHeight: "500px",
-                        margin: "40px auto",
-                        }}
-                    />  
-                    )
-                }
-                
+                <div className={d.imagesParent}>
+                    <div className={d.images}>
+                        {!imagesReady ? 
+                        ""
+                        : 
+                        (
+                            <Carousel axis="horizontal">
+                                {images.map(el=>{
+                                    return <div>
+                                        <img src={el.image} alt="" />
+                                    </div>
+                                })}
+                            </Carousel>
+                            )
+                        }
+                    </div>
                 </div>
 
                 <section className={d.dataTable} id={d.icons}>

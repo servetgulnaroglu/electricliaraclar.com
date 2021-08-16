@@ -4,7 +4,6 @@ import SingleCarLayout from '../components/singlecarlayout';
 import Filter from '../components/filter'
 import { getCarsSorted} from '../lib/cars';
 import css from '../styles/singlecarlayout.module.css';
-import { Carousel } from 'react-carousel-minimal';
 import SORTING_METHODS from '../lib/sortContsants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

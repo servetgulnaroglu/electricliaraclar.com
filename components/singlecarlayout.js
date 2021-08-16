@@ -152,8 +152,15 @@ export default function SingleCarLayout({ car, home }) {
             <Head>
                 <title>{car.model}</title>
             </Head>
+
             <div className={d.car}>
+
                 <div className={d.headerContainer}>
+                    <div className={d.backToHome}>
+                        <Link href="/">
+                            <a>← Anasayfa</a>
+                        </Link>
+                    </div>
                     <div className={d.header}>
                         <h1>{car.model}</h1>
                         <span>Elektrikli Araç</span>
@@ -183,7 +190,7 @@ export default function SingleCarLayout({ car, home }) {
 
                             })}
 
-                            
+
                         </Carousel>
                     </div>
                 </div>
@@ -757,10 +764,18 @@ export default function SingleCarLayout({ car, home }) {
                                     })}
                                 
                                 </tbody></table>
-                            <p className={d.fDashTwelve}>† = Limited by charging capabilities of vehicle</p><p className={d.fDashTwelve}>Actual charging rates may differ from data shown due to factors like outside temperature, state of the battery and driving style.</p>
+                            <p className={d.fDashTwelve}>† = Aracın şarj yetenekleri ile sınırlıdır</p>
+                            <p className={d.fDashTwelve}>Gerçek şarj oranları; dış sıcaklık, akünün durumu ve sürüş tarzı gibi faktörler nedeniyle gösterilen verilerden farklı olabilir.</p>
                         </div>
                     </div></section>
+                    <div className={d.backToHome}>
+                <Link href="/">
+                    <a>← Anasayfa</a>
+                </Link>
             </div>
+            </div>
+
+
             <style  jsx>{`
                 tr:nth-child(odd){
                     background-color: #eee;

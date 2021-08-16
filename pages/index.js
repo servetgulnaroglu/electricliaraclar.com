@@ -8,7 +8,7 @@ import SORTING_METHODS from '../lib/sortContsants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const initialSortingMethod = SORTING_METHODS.ALPHABETIC
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // Fetch data from external API
   const cars = await getCarsSorted(initialSortingMethod);
   // Pass data to the page via props

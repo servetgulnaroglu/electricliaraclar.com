@@ -14,8 +14,6 @@ import checkImage from '../lib/imageExists';
 
 
 export default function SingleCarLayout({ car, home }) {
-    const [images,setImages] = useState([{image:car.firstImageUrl, caption:""}]);
-    const [imagesReady, setImagesReady] = useState(false);
     const captionStyle = {
         fontSize: '2em',
         fontWeight: 'bold',
@@ -149,28 +147,7 @@ export default function SingleCarLayout({ car, home }) {
                 </div>
             </>
         )
-    } else {
-        useEffect(()=>{
-            async function getImageData(){
-                for(var i = 2; i < 50; i++){
-                    var imgUrl =car.firstImageUrl; 
-                    imgUrl = imgUrl.substring(0, imgUrl.length-6) + (i < 10? "0" + i: i) + ".jpg";
-                    var exists = await checkImage(imgUrl);
-                    if(exists){
-                        images.push({
-                            image:imgUrl,
-                            caption:""
-                        })
-                        console.log(images);
-                    } else {
-                        setImagesReady(true);
-                        return;
-                    }
-                }
-            }
-            getImageData();
-        }, []);
-        
+    } else {        
         return (<>
             <Head>
                 <title>{car.model}</title>
@@ -184,19 +161,26 @@ export default function SingleCarLayout({ car, home }) {
                 </div>
                 <div className={d.imagesParent}>
                     <div className={d.images}>
-                        {!imagesReady ? 
+                        {/* {!imagesReady ? 
                         ""
                         : 
                         (
                             <Carousel axis="horizontal">
-                                {images.map(el=>{
+                                {car.images.map(el=>{
                                     return <div>
                                         <img src={el.image} alt="" />
                                     </div>
                                 })}
                             </Carousel>
                             )
-                        }
+                        } */}   
+                        <Carousel axis="horizontal">
+                            {car.images.map(el=>{
+                                return <div key={el.image}>
+                                    <img src={el.image} alt="" />
+                                </div>
+                            })}
+                        </Carousel>
                     </div>
                 </div>
 

@@ -3,7 +3,7 @@ import { getCarData, getAllCarIds } from "../../lib/cars"
 
 
 export async function getStaticProps({ params }) {
-    const carData = getCarData(params.id)
+    const carData = await getCarData(params.id)
     return {
       props: {
         carData

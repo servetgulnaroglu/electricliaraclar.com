@@ -6,6 +6,7 @@ import { getCarsSorted} from '../lib/cars';
 import css from '../styles/singlecarlayout.module.css';
 import SORTING_METHODS from '../lib/sortContsants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSort } from '@fortawesome/free-solid-svg-icons';
 
 const initialSortingMethod = SORTING_METHODS.ALPHABETIC
 export async function getStaticProps() {
@@ -32,7 +33,7 @@ export default function Home({cars}) {
           <h5>{cars.length} araç</h5>
           <div className={css.carsFilter}>
             <div className={css.dropdown}>
-              <button className={css.dropbtn}>{filterTypeToString(filterType)}</button>
+              <button className={css.dropbtn}><FontAwesomeIcon icon={faSort}/> {filterTypeToString(filterType)}</button>
               <div className={css.dropdownContent}>
                 {Object.keys(SORTING_METHODS).map((method)=>{
                   return <a href="#" key={method} onClick={()=>{

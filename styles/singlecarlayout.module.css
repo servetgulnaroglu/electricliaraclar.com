@@ -154,6 +154,7 @@
     color: white;
     padding: 16px;
     min-width: 200px;
+    width: 300px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -182,7 +183,69 @@
     text-decoration: none;
     display: block;
   }
-  
-  .dropdownContent a:hover {background-color: #f1f1f1;}
-  .dropdown:hover .dropdownContent {display: block;}
-  .dropdown:hover .dropbtn {background-color: rgb(102, 102, 102);}
+
+.dropdownContent a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdownContent {display: block;}
+.dropdown:hover .dropbtn {background-color: rgb(102, 102, 102);}
+
+@media only screen and (max-width: 960px) {
+    .dataWrapper, .img, .titleWrap, .icons, .specs, .pricing{
+        position: static;
+    }
+    .img {
+        margin: auto;
+    
+    }
+    .titleWrap {
+        text-align: center;
+    }
+    .specs {
+        position: relative;
+        left: 0;
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .dataWrapper {
+        height: min-content;
+    }
+    .icons {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .specs p{
+        padding: 0;
+    }
+
+    .pricing {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+
+
+@media only screen and (max-width: 660px) {
+    .carsFilter {
+        position:static;
+        margin: auto;
+        text-align: center;
+    }
+
+    .dropdown {
+        width: 90%;
+        margin: 20px 0;
+    }
+    .dropbtn {
+        width: 100%;
+    }
+    .carsHeader {
+        text-align: center;
+    }
+}
+

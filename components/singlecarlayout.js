@@ -200,7 +200,7 @@ export default function SingleCarLayout({ car, home }) {
                         <div className={d.icon}>
                             <FontAwesomeIcon className={d.iconInner} icon={faBatteryFull} />
                             <p>
-                                {car.useableBattery.substring(0, car.useableBattery.indexOf("Useable"))}
+                                {car.useableBattery.substring(0, car.useableBattery.indexOf("Kul"))}
                                 <span>Kullanılabilir Batarya</span>
                             </p>
                         </div>
@@ -209,7 +209,7 @@ export default function SingleCarLayout({ car, home }) {
                         <div className={d.icon}>
                             <FontAwesomeIcon className={d.iconInner} icon={faRoad} />
                             <p>
-                                {car.realRange.substring(0, car.realRange.indexOf("Real"))}
+                                {car.realRange.substring(0, car.realRange.indexOf("Men"))}
                                 <span>Menzil</span>
                             </p>
                         </div>
@@ -218,7 +218,7 @@ export default function SingleCarLayout({ car, home }) {
                         <div className={d.icon}>
                             <FontAwesomeIcon className={d.iconInner} icon={faLeaf} />
                             <p>
-                                {car.efficency.substring(0, car.efficency.indexOf("Effi"))}
+                                {car.efficency.substring(0, car.efficency.indexOf("Ver"))}
                                 <span>Verim</span>
                             </p>
                         </div>
@@ -331,7 +331,7 @@ export default function SingleCarLayout({ car, home }) {
                             <table className={d.table}>
                                 <tbody><tr>
                                     <td>Hızlanma 0 - 100 km/h {handleIfEstimation(car.performance.acceleration0and100kmOverH.isEstimation)}</td>
-                                    <td className={d.tdRight}>{car.performance.acceleration0and100kmOverH.value.substring(0, car.performance.acceleration0and100kmOverH.value.indexOf("sec")) + " saniye"}</td>
+                                    <td className={d.tdRight}>{car.performance.acceleration0and100kmOverH.value.substring(0, car.performance.acceleration0and100kmOverH.value.indexOf("san")) + " saniye"}</td>
                                 </tr>
                                     <tr>
                                         <td>En Yüksek Hız {handleIfEstimation(car.performance.topSpeed.isEstimation)}</td>
@@ -483,21 +483,21 @@ export default function SingleCarLayout({ car, home }) {
                     </div>
 
                     <div className={d.dataTable + " " + d.hasLegend} id="real-consumption">
-                        <h2>Enerji Tüketimi						<span>between 142 - 288 Wh/km</span></h2>
+                        <h2 className={d.h2}>Enerji Tüketimi						<span style={{ fontSize: "16px" }}>{car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.betweenXandYWhOverKm.substring(7, car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.betweenXandYWhOverKm.length) + " arasında"}</span></h2>
 
                         <div className={d.inlineBlock}>
                             <table className={d.table}>
                                 <tbody><tr>
-                                    <td>Şehir - Soğuk Hava {handleIfEstimation(car.realRangeEstimatinoBeetweenXandYkm.cityColdWeather.isEstimation)} </td>
-                                    <td className={d.tdRight}>{car.realRangeEstimatinoBeetweenXandYkm.cityColdWeather.value}</td>
+                                    <td>Şehir - Soğuk Hava {handleIfEstimation(car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.cityColdWeather.isEstimation)} </td>
+                                    <td className={d.tdRight}>{car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.cityColdWeather.value}</td>
                                 </tr>
                                     <tr>
-                                        <td>Otoyol - Soğuk Hava {handleIfEstimation(car.realRangeEstimatinoBeetweenXandYkm.highwayColdWeather.isEstimation)}</td>
-                                        <td className={d.tdRight}>{car.realRangeEstimatinoBeetweenXandYkm.highwayColdWeather.value}</td>
+                                        <td>Otoyol - Soğuk Hava {handleIfEstimation(car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.highwayColdWeather.isEstimation)}</td>
+                                        <td className={d.tdRight}>{car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.highwayColdWeather.value}</td>
                                     </tr>
                                     <tr>
-                                        <td>Karışık - Soğuk Hava {handleIfEstimation(car.realRangeEstimatinoBeetweenXandYkm.combinedColdWeather.isEstimation)}</td>
-                                        <td className={d.tdRight}>{car.realRangeEstimatinoBeetweenXandYkm.combinedColdWeather.value}</td>
+                                        <td>Karışık - Soğuk Hava {handleIfEstimation(car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.combinedColdWeather.isEstimation)}</td>
+                                        <td className={d.tdRight}>{car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.combinedColdWeather.value}</td>
                                     </tr>
                                 </tbody></table>
                         </div>
@@ -505,16 +505,16 @@ export default function SingleCarLayout({ car, home }) {
                         <div className={d.inlineBlock + " " + d.tableRight}>
                             <table className={d.table}>
                                 <tbody><tr>
-                                    <td>Şehir - Ilımlı Hava {handleIfEstimation(car.realRangeEstimatinoBeetweenXandYkm.cityMildWeather.isEstimation)} </td>
-                                    <td className={d.tdRight}>{car.realRangeEstimatinoBeetweenXandYkm.cityMildWeather.value}</td>
+                                    <td>Şehir - Ilımlı Hava {handleIfEstimation(car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.cityMildWeather.isEstimation)} </td>
+                                    <td className={d.tdRight}>{car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.cityMildWeather.value}</td>
                                 </tr>
                                     <tr>
-                                        <td>Otoyol - Ilımlı Hava {handleIfEstimation(car.realRangeEstimatinoBeetweenXandYkm.highwayMildWeather.isEstimation)}</td>
-                                        <td className={d.tdRight}>{car.realRangeEstimatinoBeetweenXandYkm.highwayMildWeather.value}</td>
+                                        <td>Otoyol - Ilımlı Hava {handleIfEstimation(car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.highwayMildWeather.isEstimation)}</td>
+                                        <td className={d.tdRight}>{car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.highwayMildWeather.value}</td>
                                     </tr>
                                     <tr>
-                                        <td>Karışık - Ilımlı Hava {handleIfEstimation(car.realRangeEstimatinoBeetweenXandYkm.combinedMildWeather.isEstimation)}</td>
-                                        <td className={d.tdRight}>{car.realRangeEstimatinoBeetweenXandYkm.combinedMildWeather.value}</td>
+                                        <td>Karışık - Ilımlı Hava {handleIfEstimation(car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.combinedMildWeather.isEstimation)}</td>
+                                        <td className={d.tdRight}>{car.realEnergyConsumptionEstimationBetweenXandYWhOverKm.combinedMildWeather.value}</td>
                                     </tr>
                                 </tbody></table>
                         </div>
@@ -660,19 +660,19 @@ export default function SingleCarLayout({ car, home }) {
 
 
                 <section className={d.dataTableContainer +  " " +  d.chargeTable} id="charge-table">
-                    <h2 className={d.h2} style={{paddingBottom: "5px",borderBottom:"1px solid #ddd"}}>Ev ve Yol Şarjı(0 -&gt; 100%)</h2>
+                    <h2 className={d.h2} style={{padding:"20px 0px",paddingBottom: "5px",borderBottom:"1px solid #ddd"}}>Ev ve Yol Şarjı(0 -&gt; 100%)</h2>
                     <div className={d.infoBox}>
                         <p>Normal bir duvar prizi veya bir şarj istasyonu kullanarak şarj etmek mümkündür. Halka açık şarj her zaman bir şarj istasyonu aracılığıyla yapılır.
                              EV'nin ne kadar hızlı şarj olabileceği, kullanılan şarj istasyonuna (EVSE) ve EV'nin maksimum şarj kapasitesine bağlıdır. 
                             Aşağıdaki tablo, {car.model}'ı şarj etmek için olası tüm seçenekleri göstermektedir. Her seçenek, pilin boştan doluya ne kadar hızlı şarj edilebileceğini gösterir.</p>
                         {/* <p>NOTE: Tesla has not released details about the on-board charger of the Roadster. The information
                             below is based on estimatation of the most likely on-board charger.</p> */}
-                        <h3>Avrupa</h3>
+                        <h3 style={{padding:"20px 0px 10px 0px"}}>Avrupa</h3>
                         <p>Avrupa'da bir EV'yi şarj etmek ülkeye göre değişir. Bazı Avrupa ülkeleri öncelikle şebekeye 1 fazlı bağlantılar kullanırken, 
                             diğer ülkeler neredeyse sadece 3 fazlı bağlantı kullanıyor. Aşağıdaki tablo {car.model}'ın şarj edilebileceği tüm olası yolları göstermektedir, 
                             ancak bazı şarj modları bazı ülkelerde yaygın olarak bulunmayabilir.</p>
-                        <div>
-                            <table className={d.table}>
+                        <div style={{padding:"20px 0px"}}>
+                            <table className={d.table} >
                                 <tbody><tr>
                                     <th>{car.homeAndDestinationCharging0to100Percent.chargetType}</th>
                                 </tr>
@@ -708,7 +708,7 @@ export default function SingleCarLayout({ car, home }) {
                                     })}
                                 </tbody></table>
                         </div>
-                        <p className={d.fDashTwelve}>† = Limited by on-board charger, vehicle cannot charge faster.</p>
+                        <p className={d.fDashTwelve} style={{paddingBottom:"20px"}}>† = Limited by on-board charger, vehicle cannot charge faster.</p>
 
                     </div>
 
@@ -726,7 +726,7 @@ export default function SingleCarLayout({ car, home }) {
                             <li className={d.listItem}>Süre: %10'dan %80'e şarj etmek için gereken süre</li>
                             <li className={d.listItem}>Oran: bir oturumda ortalama şarj hızı %10'dan %80'e</li>
                         </ul>
-                        <h3>Avrupa</h3>
+                        <h3 style={{padding:"20px 0px 10px 0px"}}>Avrupa</h3>
 
                         <div>
                             <table className={d.table}>

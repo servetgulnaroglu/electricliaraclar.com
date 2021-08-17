@@ -24,13 +24,12 @@ export default function Home({cars}) {
   return (
     <div className="container">
       <Head>
-        <title>Electricli Araclar</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>electricliaraclar</title>
       </Head>
       <div className={css.centerMax1024}>
         <div className={css.carsHeader}>
           <h1>Tüm Elektrikli Araçlar</h1>
-          <h5>{cars.length} araç</h5>
+          <p>{cars.length} araç</p>
           <div className={css.carsFilter}>
             <div className={css.dropdown}>
               <button className={css.dropbtn}><FontAwesomeIcon icon={faSort}/> {filterTypeToString(filterType)}</button>

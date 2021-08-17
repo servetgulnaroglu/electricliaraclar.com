@@ -27,6 +27,7 @@ export default function SingleCarLayout({ car, home }) {
             <>
                 <Head>
                     <title>Electrikli Araclar</title>
+                    <meta name="description" content={"2021 ve 2022 için en yeni ve yakında çıkacak elektrikli araçlara genel bakış. Menzil, hızlı şarj, model ve fiyata göre sıralama yapın ve karşılaştırın. " + car.model + " aracının tüm özelliklerinini inceleyin."} />
                 </Head>
                 <div className={h.item}>
                     <div className={h.dataWrapper}>
@@ -65,7 +66,7 @@ export default function SingleCarLayout({ car, home }) {
                                 </>
                             }
                             {/* arkadan cekis onden cekis datasi cekilmeli */}
-                            {car.miscellaneous.segment.value == "" ? <></>
+                            {car.miscellaneous.segment.value == "" || car.miscellaneous.segment.value == "Veri yok" ? <></>
                                 :
                                 <>
                                     <span title="Market Segmenti" style={{ paddingLeft: '10px' }}>{car.miscellaneous.segment.value.substring(0, car.miscellaneous.segment.value.indexOf(" "))}</span>
@@ -681,6 +682,7 @@ export default function SingleCarLayout({ car, home }) {
                                             <img
                                             style={{margin:"auto", textAlign:"center"}}
                                             src='/images/Type-2-Mennekes.jpeg'
+                                            alt="Type 2 Mennekes"
                                             />
                                             {/* <img src="/img/informatie/Type-2-Mennekes-IEC-62196.jpg" srcset="/img/informatie/Type-2-Mennekes-IEC-62196@2x.jpg 2x" /> */}
                                         </td>
@@ -738,6 +740,7 @@ export default function SingleCarLayout({ car, home }) {
                                         <img
                                             style={{margin:"auto", textAlign:"center"}}
                                             src='/images/Combined-Charging-System.jpeg'
+                                            alt="Kombine Şarj Sistemi"
                                             />
                                         </td>
                                     </tr>

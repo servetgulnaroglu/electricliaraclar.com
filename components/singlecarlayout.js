@@ -29,7 +29,7 @@ export default function SingleCarLayout({ car, home }) {
                     <title>Electrikli Araclar</title>
                     <meta name="description" content={"2021 ve 2022 için en yeni ve yakında çıkacak elektrikli araçlara genel bakış. Menzil, hızlı şarj, model ve fiyata göre sıralama yapın ve karşılaştırın. " + car.model + " aracının tüm özelliklerinini inceleyin."} />
                 </Head>
-                <div className={h.item}>
+                <div className={h.item} itemScope itemType="https://schema.org/Car">
                     <div className={h.dataWrapper}>
                         <div className={h.img}>
                             <Link href={getCarLink(car.model)}>

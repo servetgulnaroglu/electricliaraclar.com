@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@babel/plugin-syntax-jsx": "^7.0.0-beta.31",
+    "@babel/plugin-syntax-jsx": "^7.14.5",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
@@ -21,11 +21,11 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-easy-swipe": "0.0.22",
-    "react-responsive-carousel": "^3.2.20",
+    "react-responsive-carousel": "^3.2.21",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "core-js": "^2.6.5",
+    "core-js": "^2.6.12",
     "webpack-remove-empty-scripts": "^0.7.1"
   }
 }

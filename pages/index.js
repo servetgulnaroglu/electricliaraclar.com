@@ -24,7 +24,8 @@ export default function Home({cars}) {
   return (
     <div className="container">
       <Head>
-        <title>electricliaraclar</title>
+        <title>Elektrikli Araçlar</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={css.centerMax1024}>
         <div className={css.carsHeader}>
@@ -33,7 +34,7 @@ export default function Home({cars}) {
           <div className={css.carsFilter}>
             <div className={css.dropdown}>
               <button className={css.dropbtn}><FontAwesomeIcon icon={faSort}/> {filterTypeToString(filterType)}</button>
-              <div className={css.dropdownContent}>
+              <article className={css.dropdownContent}>
                 {Object.keys(SORTING_METHODS).map((method)=>{
                   return <a href="#" key={method} onClick={()=>{
                     setFilterType(method);
@@ -41,15 +42,15 @@ export default function Home({cars}) {
                   }}>{filterTypeToString(method)}</a>
                 })
                 }
-              </div>
+              </article>
             </div>
           </div>
         </div>
-        <div className={css.centerMax1024}>
+        <article className={css.centerMax1024}>
           {carsState.map(element => {
             return <SingleCarLayout key={element.model}  car={element} home/>
           })}
-        </div>
+        </article>
       </div>
     </div>
   )

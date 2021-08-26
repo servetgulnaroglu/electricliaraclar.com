@@ -7,7 +7,7 @@ class MyDocument extends Document {
         <Head> 
             <link rel="icon" href="/favicon.ico" />
             <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
-            <meta name="description" content="2021 ve 2022 için en yeni ve yakında çıkacak elektrikli araçlara genel bakış. Menzil, hızlı şarj, model ve fiyata göre sıralama yapın ve karşılaştırın."/>
+            <meta name="description" content="2021 ve 2022 için en yeni ve yakında çıkacak elektrikli araçlara genel bakış. Menzil, hızlı şarj, model ve fiyata göre sıralama yapın ve karşılaştırın. electricliaraclar.com"/>
             <meta name="keywords" content="elektrikli araçlar, elektrikli arabalar, son çıkan elektrikli arabalar,
             avrupada elektrikli araç fiyatları, son model elektrikli arabalar, elektrik, araba, araç, elektrikli araba karşılaştırma,
             elektrikli araba özellikleri"/>
@@ -22,6 +22,7 @@ class MyDocument extends Document {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
+          <title>Elektrikli Araçlar</title>
           <script
             dangerouslySetInnerHTML={{
               __html: `

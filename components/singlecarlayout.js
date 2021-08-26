@@ -148,7 +148,6 @@ export default function SingleCarLayout({ car, home }) {
         return (<>
             <Head>
                 <title>{car.model}</title>
-                <meta name="description" content={"2021 ve 2022 için en yeni ve yakında çıkacak elektrikli araçlara genel bakış. Menzil, hızlı şarj, model ve fiyata göre sıralama yapın ve karşılaştırın. " + car.model + " aracının tüm özelliklerinini inceleyin."} />
                 <meta name="keywords" content={ car.model +"elektrikli araçlar, elektrikli arabalar, son çıkan elektrikli arabalar,avrupada elektrikli araç fiyatları, son model elektrikli arabalar, elektrik, araba, araç, elektrikli araba karşılaştırma,elektrikli araba özellikleri,"}/>
             </Head>
             <div className={d.car}>
